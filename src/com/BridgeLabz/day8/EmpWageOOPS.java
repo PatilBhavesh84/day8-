@@ -7,19 +7,23 @@ public class EmpWageOOPS {
 	EmpWageOOPS(int p){
 		int ratePerHr=20;
 		int salary;
-		if(p==FULL_TIME) {
-			int empHr=8;
-			salary=empHr*ratePerHr;
-			System.out.println("Employee wage is-"+salary);
+		int empHr;
+
+		switch(p)  {
+		case FULL_TIME:
+			empHr=8;
+			break;
+
+		case PART_TIME: 
+			empHr=4;
+			break;
+
+		default:
+			empHr=0;
+
 		}
-		else if(p==PART_TIME) {
-			int empHr=4;
-			salary=empHr*ratePerHr;
-			System.out.println("Employee wage is-"+salary);
-		}
-		else {
-			System.out.println("Employee is absent");
-		}
+		salary=ratePerHr*empHr;
+		System.out.println("Salary is "+salary);
 	}
 
 	public static void main(String[]args) {
