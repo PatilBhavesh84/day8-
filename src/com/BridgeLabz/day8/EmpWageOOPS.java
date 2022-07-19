@@ -2,10 +2,18 @@ package com.BridgeLabz.day8;
 
 public class EmpWageOOPS {
 
-	public static void main(String[] args) {
+	EmpWageOOPS(int p){
 
-		System.out.println("Welcome to Employee Wage Computation"
-				+ "");
+		if(p==1) {
+			System.out.println("Employee is present");
+		}
+		else
+			System.out.println("Employee is absent");
+	}
 
+	public static void main(String[]args) {
+		System.out.println("Welcome to Employee Wage Computation");
+		int empCheck=(int)Math.floor(Math.random()*10%2);
+		EmpWageOOPS obj = new EmpWageOOPS(empCheck);
 	}
 }
