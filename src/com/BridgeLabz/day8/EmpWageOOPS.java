@@ -2,21 +2,29 @@ package com.BridgeLabz.day8;
 
 public class EmpWageOOPS {
 
+	public static final int FULL_TIME=1;
+	public static final int PART_TIME=2;
 	EmpWageOOPS(int p){
-		int RatePerHr=20;
-		int empHr=8;
+		int ratePerHr=20;
 		int salary;
-		if(p==1) {
-			salary=empHr*RatePerHr;
+		if(p==FULL_TIME) {
+			int empHr=8;
+			salary=empHr*ratePerHr;
 			System.out.println("Employee wage is-"+salary);
 		}
-		else
-			System.out.println("Employee wage is-0");
+		else if(p==PART_TIME) {
+			int empHr=4;
+			salary=empHr*ratePerHr;
+			System.out.println("Employee wage is-"+salary);
+		}
+		else {
+			System.out.println("Employee is absent");
+		}
 	}
 
 	public static void main(String[]args) {
 		System.out.println("Welcome to Employee Wage Computation");
-		int empCheck=(int)Math.floor(Math.random()*10%2);
+		int empCheck=(int)Math.floor(Math.random()*10%3);
 		EmpWageOOPS obj = new EmpWageOOPS(empCheck);
 	}
 }
