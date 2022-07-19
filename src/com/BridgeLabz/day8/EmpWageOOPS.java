@@ -3,12 +3,15 @@ package com.BridgeLabz.day8;
 public class EmpWageOOPS {
 
 	EmpWageOOPS(int p){
-
+		int RatePerHr=20;
+		int empHr=8;
+		int salary;
 		if(p==1) {
-			System.out.println("Employee is present");
+			salary=empHr*RatePerHr;
+			System.out.println("Employee wage is-"+salary);
 		}
 		else
-			System.out.println("Employee is absent");
+			System.out.println("Employee wage is-0");
 	}
 
 	public static void main(String[]args) {
