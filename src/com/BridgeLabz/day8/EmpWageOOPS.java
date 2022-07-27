@@ -22,7 +22,8 @@ public class EmpWageOOPS {
 				empHrs = 8;
 				break;
 			case PART_TIME:
-				empHrs = 4;			break;
+				empHrs = 4;			
+				break;
 			default:
 				empHrs =0;
 			}
@@ -36,8 +37,6 @@ public class EmpWageOOPS {
 
 
 	public static void main(String[]args) {
-		System.out.println("Welcome to Employee Wage Computation");
-
 		EmpWageOOPS obj = new EmpWageOOPS();
 	}
 }
